@@ -33,14 +33,15 @@ public class CalculatorGUI extends JFrame {
 
         // Painel de botões
         JPanel painelBotoes = new JPanel();
-        painelBotoes.setLayout(new GridLayout(4, 4, 5, 5));
+        painelBotoes.setLayout(new GridLayout(5, 4, 5, 5)); // Mudando para 5 linhas para adicionar o botão "CE"
 
         // Botões numéricos e de operação
         String[] botoes = {
                 "7", "8", "9", "+",
                 "4", "5", "6", "-",
                 "1", "2", "3", "*",
-                "C", "0", "=", "/"
+                "C", "0", "=", "/",
+                "CE" // Botão para apagar a última entrada
         };
 
         for (String texto : botoes) {
@@ -77,10 +78,17 @@ public class CalculatorGUI extends JFrame {
                 display.setText(Float.isNaN(resultado) ? "Erro" : String.valueOf(resultado));
                 novaOperacao = true;
             } else if (texto.equals("C")) {
+                // Limpa todas as operações e reseta a calculadora
                 display.setText("");
                 numero1 = 0;
                 operador = "";
                 novaOperacao = true;
+            } else if (texto.equals("CE")) {
+                // Limpa a última entrada no display, mas não altera as variáveis principais
+                String textoDisplay = display.getText();
+                if (textoDisplay.length() > 0) {
+                    display.setText(textoDisplay.substring(0, textoDisplay.length() - 1));
+                }
             }
         }
     }
