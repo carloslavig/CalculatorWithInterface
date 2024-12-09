@@ -70,7 +70,9 @@ License
 This project is free to use. Feel free to use it as you like!
 
 Screenshots
-Calculator in light mode:![image](https://github.com/user-attachments/assets/fd59d2a5-0828-40f3-a252-78a68595a1b7)
+Calculator in light mode:
+![image](https://github.com/user-attachments/assets/fd59d2a5-0828-40f3-a252-78a68595a1b7)
 
-Calculator in dark mode:![image](https://github.com/user-attachments/assets/28a2c1ad-f5f8-4e63-8364-4a95c60c522f)
+Calculator in dark mode:
+![image](https://github.com/user-attachments/assets/28a2c1ad-f5f8-4e63-8364-4a95c60c522f)
 
